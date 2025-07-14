@@ -29,3 +29,6 @@ step2-npm run dev
 Login Credentials are-
 UserName - Admin
 Passwrod- Admin@123
+
+
+Vercel Link -- https://event-management-dashboard-mocha.vercel.app/
