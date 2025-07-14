@@ -7,16 +7,8 @@ import {
   Box,
   Container,
 } from '@mui/material';
-import { logout } from '../utils/auth';
-import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
-  };
+const Header = ({onLogout}) => {
 
   return (
     <AppBar
@@ -48,7 +40,7 @@ const Header = () => {
             <Button
               variant="outlined"
               color="inherit"
-              onClick={handleLogout}
+              onClick={onLogout}
               sx={{
                 borderColor: '#fff',
                 color: '#fff',

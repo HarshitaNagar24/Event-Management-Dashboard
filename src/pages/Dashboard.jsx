@@ -8,7 +8,7 @@ import { Container, Box } from '@mui/material';
 import CustomSnackbar from '../components/common/CustomSnackbar'; // Import your snackbar
 import EventTable from '../components/EventTable';
 
-const Dashboard = () => {
+const Dashboard = ({onLogout}) => {
   const location = useLocation();
   const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
 
@@ -32,7 +32,7 @@ const Dashboard = () => {
         bgcolor: '#f9f9fb',
       }}
     >
-      <Header />
+      <Header onLogout={onLogout} />
       <Container maxWidth="lg" sx={{ flex: 1, py: 4 }}>
         <EventTable/>
       </Container>

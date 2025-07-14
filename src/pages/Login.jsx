@@ -15,7 +15,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { login, setUserSession } from "../utils/auth";
 import CustomSnackbar from "../components/common/CustomSnackbar";
 
-const Login = () => {
+const Login = ({onLogin}) => {
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -42,6 +42,7 @@ const Login = () => {
         message: "✅ Login successful!",
         severity: "success",
       });
+      onLogin();
       navigate('/');
     } else {
       setSnackbar({

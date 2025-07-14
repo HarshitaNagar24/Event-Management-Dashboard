@@ -13,7 +13,7 @@ export const USER = {
   };
   
   export const isLoggedIn = () => {
-    return localStorage.getItem('isAuthenticated') === 'true';
+    return localStorage.getItem('isAuthenticated') == 'true';
   };
   
   export const logout = () => {
