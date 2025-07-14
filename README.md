@@ -1,12 +1,31 @@
-# React + Vite
+# 📅 React Event Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and feature-rich admin dashboard built using **React**, **MUI (Material-UI)**, and **Formik + Yup**. It allows admins to **add, edit, delete**, and **filter events**, with modern UI components like dialogs, snackbars, and custom tables.
 
-Currently, two official plugins are available:
+> ✅ Built as a React practical assignment for deployment-ready demonstration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Admin Login with validation**
+- 📥 **LocalStorage persistence** for event data
+- 🧾 **Add/Edit/Delete Events** with form validation
+- 📅 **Date/time picker** (restricts past dates)
+- 📊 **Responsive table** with dynamic rows and column alignment
+- 🔎 **Search & Filter by Event type**
+- 🧠 **Reusable components**: Dialog, Table, Snackbar
+- 🎨 Clean and responsive UI with **MUI v5**
+
+---
+
+## 🚀 Getting Started
+
+### 1. For run this code
+step1- npm install
+step2-npm run dev
+
+
+Login Credentials are-
+UserName - Admin
+Passwrod- Admin@123

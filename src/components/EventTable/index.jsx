@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 // Import the new, smaller components
-import TableToolbar from './TableToolbar';
+import TableToolbar from './TableToolBar';
 import EventForm from './EventForm';
 import DeleteDialog from './DeleteDialog';
 
