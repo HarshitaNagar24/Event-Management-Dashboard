@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 // Import the new, smaller components
-import TableToolbar from './TableToolBar';
+import TableToolBar from './TableToolBar';
 import EventForm from './EventForm';
 import DeleteDialog from './DeleteDialog';
 
@@ -127,7 +127,7 @@ const EventTable = () => {
 
   return (
     <Box>
-      <TableToolbar
+      <TableToolBar
         search={search}
         onSearchChange={setSearch}
         filterType={filterType}

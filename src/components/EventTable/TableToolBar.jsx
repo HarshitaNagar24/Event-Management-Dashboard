@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography, TextField, MenuItem, Button } from '@mui/material';
 import { Add } from '@mui/icons-material';
 
-const TableToolbar = ({ search, onSearchChange, filterType, onFilterChange, onAddNew }) => {
+const TableToolBar = ({ search, onSearchChange, filterType, onFilterChange, onAddNew }) => {
   return (
     <Box
       display="flex"
@@ -43,4 +43,4 @@ const TableToolbar = ({ search, onSearchChange, filterType, onFilterChange, onAd
   );
 };
 
-export default TableToolbar;
+export default TableToolBar;
