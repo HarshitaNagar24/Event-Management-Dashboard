@@ -42,7 +42,7 @@ const Login = () => {
         message: "✅ Login successful!",
         severity: "success",
       });
-      navigate('/', { state: { fromLogin: true } });
+      navigate('/');
     } else {
       setSnackbar({
         open: true,
