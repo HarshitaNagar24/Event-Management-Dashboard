@@ -1,22 +1,15 @@
-// src/components/EventTable/EventForm.jsx
 import React from 'react';
-import { Box, TextField, MenuItem } from '@mui/material';
+import { Grid, TextField, MenuItem } from '@mui/material';
 
-// The form fields can now live in their own file.
-const EventForm = ({ formik, defaultValues }) => {
-  return (
-    <Box
-      display="grid"
-      gridTemplateColumns={{ xs: '1fr', md: '1fr 1fr' }}
-      gap={2}
-    >
-      {Object.keys(defaultValues).map((field) => {
-        if (field === 'id' || field === 'tags') return null;
+const EventForm = ({ formik, defaultValues }) => (
+  <Grid container spacing={2}>
+    {Object.keys(defaultValues).map((field) => {
+      if (field === 'id' || field === 'tags') return null;
 
-        if (field === 'type') {
-          return (
+      if (field === 'type') {
+        return (
+          <Grid item xs={12} md={6} key={field}>
             <TextField
-              key={field}
               id="type"
               select
               fullWidth
@@ -30,12 +23,13 @@ const EventForm = ({ formik, defaultValues }) => {
               <MenuItem value="Online">Online</MenuItem>
               <MenuItem value="Offline">Offline</MenuItem>
             </TextField>
-          );
-        }
+          </Grid>
+        );
+      }
 
-        return (
+      return (
+        <Grid item xs={12} md={6} key={field}>
           <TextField
-            key={field}
             fullWidth
             id={field}
             label={field.charAt(0).toUpperCase() + field.slice(1)}
@@ -50,22 +44,22 @@ const EventForm = ({ formik, defaultValues }) => {
               inputProps: { min: new Date().toISOString().slice(0, 16) },
             })}
           />
-        );
-      })}
-      <Box gridColumn="span 2">
-        <TextField
-          fullWidth
-          label="Tags (comma separated)"
-          name="tags"
-          id="tags"
-          value={formik.values.tags}
-          onChange={formik.handleChange}
-          error={formik.touched.tags && Boolean(formik.errors.tags)}
-          helperText={formik.touched.tags && formik.errors.tags}
-        />
-      </Box>
-    </Box>
-  );
-};
+        </Grid>
+      );
+    })}
+    <Grid item xs={12}>
+      <TextField
+        fullWidth
+        label="Tags (comma separated)"
+        name="tags"
+        id="tags"
+        value={formik.values.tags}
+        onChange={formik.handleChange}
+        error={formik.touched.tags && Boolean(formik.errors.tags)}
+        helperText={formik.touched.tags && formik.errors.tags}
+      />
+    </Grid>
+  </Grid>
+);
 
 export default EventForm;
