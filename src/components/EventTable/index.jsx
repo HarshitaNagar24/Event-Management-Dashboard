@@ -186,7 +186,7 @@ const EventTable = () => {
         open={open}
         onClose={() => setOpen(false)}
         onSubmit={formik.handleSubmit}
-        maxWidth="xs"
+        maxWidth="md"
   fullWidth={true}
         title={editMode ? 'Edit Event' : 'Add New Event'}
         submitLabel={editMode ? 'Update' : 'Add'}
