@@ -8,7 +8,7 @@ const EventForm = ({ formik, defaultValues }) => (
 
       if (field === 'type') {
         return (
-          <Grid item xs={12} sm={6} key={field}>
+          <Grid item xs={12} sm={6} md={4} key={field}>
             <TextField
               id="type"
               select
@@ -28,7 +28,7 @@ const EventForm = ({ formik, defaultValues }) => (
       }
 
       return (
-        <Grid item xs={12} sm={6} key={field}>
+        <Grid item xs={12} sm={6} md={4} key={field}>
           <TextField
             fullWidth
             id={field}
@@ -47,7 +47,7 @@ const EventForm = ({ formik, defaultValues }) => (
         </Grid>
       );
     })}
-    <Grid item xs={12}>
+    <Grid item xs={12} sm={6} md={4}>
       <TextField
         fullWidth
         label="Tags (comma separated)"
